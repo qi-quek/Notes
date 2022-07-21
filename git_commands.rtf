@@ -22,7 +22,7 @@
 {\list\listtemplateid17\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1601\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid17}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}{\listoverride\listid8\listoverridecount0\ls8}{\listoverride\listid9\listoverridecount0\ls9}{\listoverride\listid10\listoverridecount0\ls10}{\listoverride\listid11\listoverridecount0\ls11}{\listoverride\listid12\listoverridecount0\ls12}{\listoverride\listid13\listoverridecount0\ls13}{\listoverride\listid14\listoverridecount0\ls14}{\listoverride\listid15\listoverridecount0\ls15}{\listoverride\listid16\listoverridecount0\ls16}{\listoverride\listid17\listoverridecount0\ls17}}
 {\info
-{\author quek qi}}\paperw11900\paperh16840\margl1440\margr1440\vieww12500\viewh17440\viewkind1
+{\author quek qi}}\paperw11900\paperh16840\margl1440\margr1440\vieww12800\viewh17680\viewkind1
 \deftab720
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 
@@ -290,25 +290,52 @@ d.	think of your commit as something that will complete this sentence\
 {\listtext	\uc0\u8259 	}and do the usual push\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 \cf0 \ul \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 
-\f1\b Rename local branch\
+\f1\b \cf0 Rename local branch\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 
-\f0\b0 \ulnone -git branch -m <new-branch-name>(if on branch to change)\
+\f0\b0 \cf0 \ulnone -git branch -m <new-branch-name>(if on branch to change)\
 -git branch -m <old branch>  <new branch>\ul \
 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 
-\f1\b Change upstream \
+\f1\b \cf0 Change upstream \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 
-\f0\b0 \ulnone -git branch <branch_name> --set-upstream-to <remote>/<branch_name>
-\f1\b \ul \
+\f0\b0 \cf0 \ulnone -git branch <branch_name> --set-upstream-to <remote>/<branch_name>\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 \ul Uncommit last commit AND keep last commit changes(just discarding commit) \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \ulnone -git reset --soft HEAD^\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f1\b \cf0 \ul Uncommit last commit BUT lose everything you done last commit(like reset but only last commit)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \ulnone -git reset --hard HEAD\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 \ul Explanation of HEAD^ below\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 \ulnone Head refers to the current commit - generally the 
+\f1\b \ul TIP
+\f0\b0 \ulnone  of the currently checked-out branch. The ^ is a notation which can be attached to any commit specifier, and means \'93the commit before\'94. So, 
+\f1\b \ul HEAD^ 
+\f0\b0 \ulnone is the commit before the current one, just as master^ is the commit before the tip of the master branch.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
+\cf0 \ul \
 \pard\pardeftab720\partightenfactor0
-
-\f0\b0 \cf0 \
+\cf0 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 \cf0 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 
-\fs22 \cf0 \ulnone -change test command\
+\fs22 \cf0 \ulnone -added uncommon and explanation of head^\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\partightenfactor0
 
 \f2 \cf0 \
