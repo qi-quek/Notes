@@ -283,7 +283,7 @@ To preview branches that will be removed:
 
 The following command can be executed within `Goland`:
 
-	reset --hard <hash_value_of_commit>
+	git reset --hard <hash_value_of_commit>
 
 
 	git push --force
