@@ -87,6 +87,8 @@ To check the hash value of the previous commits
 
 	git log --oneline
 
+	![Figure 1](/images/git-2022-0001.png)
+
 
 Execute either :
 
